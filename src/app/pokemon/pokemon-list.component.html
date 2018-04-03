@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<h1 *ngIf="!pokemon">Loading...</h1>
 
-</body>
-</html>
+<ul class="list-view">
+  <li *ngFor="let item of pokemon">
+    <a>
+      <img src="{{ item.image() }}">
+      <span>{{ item.formattedName() }}</span>
+    </a>
+  </li>
+</ul>
